@@ -43,23 +43,54 @@ console.log(result.toUpperCase());
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "nhoJ"
 
 let result2 = "";
+// forma 1 de hacer-----------------------------
 
-for (let index = 0; index < hacker2.length; index++) {
-    result2 += hacker2.charAt(index) + " ";
+// for (let index = 0; index < hacker2.length; index++) {
+//     result2 += hacker2.charAt(index);
+// }
+
+// let convertirEnString = result2.split("");
+// let stringReverse = convertirEnString.reverse();
+// let unirArray = stringReverse.join("");
+
+// console.log(unirArray);
+
+// forma 2 de hacer -----------------------------
+for (let index = hacker2.length - 1; index >= 0; index--) {
+    result2 += hacker2.charAt(index);
 }
-console.log(result2.reverse());
+console.log(result2);
 
 // 3.3 Depending on the lexicographic order of the strings, print:
 // - The driver's name goes first.
 // - Yo, the navigator goes first definitely.
 // - What?! You both have the same name?
+
+if (hacker1.localeCompare(hacker2) === 1) {
+    console.log(`The driver's name goes first.`);
+} else if (hacker2 === hacker1) {
+    console.log(`What?! You both have the same name?`);
+} else {
+    console.log(`Yo, the navigator goes first definitely.`);
+}
+
 // Bonus Time!
 // Bonus 1:
 // Go to lorem ipsum generator and:
 
 // Generate 3 paragraphs. Store the text in a variable type of string.
+
+let paragraphLorem =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." +
+    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." +
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
+
 // Make your program count the number of words in the string.
+let separatedWordsLorem = paragraphLorem.split(" ");
+console.log(separatedWordsLorem);
+
 // Make your program count the number of times the Latin word et appears.
+
 // Bonus 2:
 // Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
 
