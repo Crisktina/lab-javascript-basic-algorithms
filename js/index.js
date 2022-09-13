@@ -87,12 +87,15 @@ let paragraphLorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`;
 
 // Make your program count the number of words in the string.
-let separatedWordsLorem = paragraphLorem.split(" ").length;
+separatedWordsLorem = paragraphLorem.split(" ").length;
 console.log(separatedWordsLorem);
 
 // Make your program count the number of times the Latin word et appears.
-let separatedWordsLorem = paragraphLorem.split(" ").length;
-console.log(separatedWordsLorem);
+etWordsLorem = paragraphLorem
+    .split(" ")
+    .filter((findEt) => findEt == "et").length;
+console.log(etWordsLorem);
+
 // Bonus 2:
 // Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
 
